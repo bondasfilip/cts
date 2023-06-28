@@ -24,7 +24,7 @@
    - [ ] c) Transients are used to handle user authentication in WordPress.
    - [ ] d) Transients are used to optimize database queries in WordPress.
 
-Example:
+<strong>Example:</strong>
 If you have a website created in Wordpress and you want to display a list of most viewed posts. First you have to calculate popularity for each post, that involve a complex database query, that means needs alot of time to execute.
 
 Instead of doing that method on each page load, you can easily use a transient to store the result for specific duration, ex: 1 hour. In this way, during that 1 hour on future requst, you can retrive most viewed posts data from that transient.  
