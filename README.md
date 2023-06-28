@@ -15,60 +15,71 @@
 1. Explain the difference between `wp_query()` and `get_posts()` in WordPress.
    - [ ] a) `wp_query()` is used for complex queries, while `get_posts()` is used for simpler queries.
    - [ ] b) `wp_query()` returns an instance of `WP_Query`, while `get_posts()` returns an array of post objects.
-   - [ ] c) `wp_query()` allows more customization options, while `get_posts()` is simpler to use.
+   - [x] c) `wp_query()` allows more customization options, while `get_posts()` is simpler to use.
    - [ ] d) There is no difference; they can be used interchangeably.
 
 2. What is the purpose of WordPress transients? Give an example use case.
-   - [ ] a) Transients are used to store temporary data across requests.
+   - [x] a) Transients are used to store temporary data across requests.
    - [ ] b) Transients are used to secure communication between the server and the database.
    - [ ] c) Transients are used to handle user authentication in WordPress.
    - [ ] d) Transients are used to optimize database queries in WordPress.
 
+Example:
+If you have a website created in Wordpress and you want to display a list of most viewed posts. First you have to calculate popularity for each post, that involve a complex database query, that means needs alot of time to execute.
+
+Instead of doing that method on each page load, you can easily use a transient to store the result for specific duration, ex: 1 hour. In this way, during that 1 hour on future requst, you can retrive most viewed posts data from that transient.  
+
+Doing this you avoid execute that expensive query again and reduce the load on your database.
+
+After 1 hour, transient expires, and will be regenerate for 1 hour.
+
+
+
 3. Which of the following statements about custom post types in WordPress is true?
    - [ ] a) Custom post types allow you to create custom database tables in WordPress.
-   - [ ] b) Custom post types are a way to extend WordPress beyond blog posts and pages.
+   - [x] b) Custom post types are a way to extend WordPress beyond blog posts and pages.
    - [ ] c) Custom post types are only used for displaying images and media files in WordPress.
    - [ ] d) Custom post types are pre-defined post formats available in WordPress.
 
 4. In WordPress, which file is responsible for displaying the content of a single blog post?
-   - [ ] a) `single.php`
+   - [x] a) `single.php`
    - [ ] b) `page.php`
    - [ ] c) `archive.php`
    - [ ] d) `index.php`
 
 5. How can you optimize the performance of a WordPress website? Select all that apply.
-   - [ ] a) Caching
-   - [ ] b) Minification of CSS and JavaScript files
-   - [ ] c) Using a CDN (Content Delivery Network)
-   - [ ] d) Implementing lazy loading of images
+   - [x] a) Caching
+   - [x] b) Minification of CSS and JavaScript files
+   - [x] c) Using a CDN (Content Delivery Network)
+   - [x] d) Implementing lazy loading of images
 
 6. What is the difference between a shortcode and a widget in WordPress?
    - [ ] a) Shortcodes are used to create dynamic content, while widgets are used for static content.
-   - [ ] b) Shortcodes are used in posts and pages, while widgets are used in sidebars and other widget areas.
+   - [x] b) Shortcodes are used in posts and pages, while widgets are used in sidebars and other widget areas.
    - [ ] c) Shortcodes can only be used by administrators, while widgets are available to all users.
    - [ ] d) There is no difference; they can be used interchangeably.
 
 7. What are the main security considerations when developing a WordPress plugin or theme? Select all that apply.
-   - [ ] a) Validating and sanitizing user input
-   - [ ] b) Escaping output data
-   - [ ] c) Using secure coding practices
-   - [ ] d) Hiding the WordPress version number
+   - [x] a) Validating and sanitizing user input
+   - [x] b) Escaping output data
+   - [x] c) Using secure coding practices
+   - [x] d) Hiding the WordPress version number
 
 8. Which of the following statements about the `wpdb` class in WordPress is true?
    - [ ] a) The `wpdb` class is used to create custom database tables in WordPress.
-   - [ ] b) The `wpdb` class is used to interact with the WordPress database using SQL queries.
+   - [x] b) The `wpdb` class is used to interact with the WordPress database using SQL queries.
    - [ ] c) The `wpdb` class is used to implement AJAX functionality in WordPress.
    - [ ] d) The `wpdb` class is used to handle user authentication in WordPress.
 
 9. What is the purpose of the `__construct()` method in a PHP class?
    - [ ] a) It is used to define class constants.
-   - [ ] b) It is used to initialize class properties.
+   - [x] b) It is used to initialize class properties.
    - [ ] c) It is used to define static methods.
    - [ ] d) It is used to declare class interfaces.
 
 10. Which of the following statements about namespaces in PHP is true?
     - [ ] a) Namespaces are used to define global variables.
-    - [ ] b) Namespaces are used to organize classes, functions, and constants into logical groups.
+    - [x] b) Namespaces are used to organize classes, functions, and constants into logical groups.
     - [ ] c) Namespaces are used to define CSS styles for HTML elements.
     - [ ] d) Namespaces are used to define database tables in WordPress.
 
